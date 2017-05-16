@@ -20,7 +20,7 @@ pip install -Iv ansible==2.2.0.0
 
 mkdir -p ~/workspace && cd ~/workspace
 git clone http://github.com/openshift/openshift-ansible
-git clone http://github.com/gshipley/installcentos
+git clone https://github.com/carlosthe19916/installcentos
 
 cat <<EOD > /etc/hosts
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4 console console.${DOMAIN}
