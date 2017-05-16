@@ -7,15 +7,15 @@ ansible_ssh_user=root
 deployment_type=origin
 openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
 containerized=true
-openshift_release=v1.4
-openshift_image_tag=v1.4.0
-openshift_public_hostname=console.techdope.io
-openshift_master_default_subdomain=apps.console.techdope.io
-openshift_hosted_metrics_deploy=false
+openshift_release=v1.5
+openshift_image_tag=v1.5.0
+openshift_public_hostname=console.sistcoop.org
+openshift_master_default_subdomain=apps.console.sistcoop.org
+openshift_hosted_metrics_deploy=true
 
 
 [masters]
-console.techdope.io openshift_schedulable=true
+console.sistcoop.org openshift_schedulable=true
 
 [nodes]
-console.techdope.io openshift_node_labels="{'region': 'infra', 'zone': 'default'}" openshift_schedulable=true
+console.sistcoop.org openshift_node_labels="{'region': 'infra', 'zone': 'default'}" openshift_schedulable=true
