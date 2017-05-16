@@ -16,5 +16,5 @@ Install RedHat OpenShift Origin in your development box.
 3. Run the automagic installation script as root:
 
 #+BEGIN_EXAMPLE
-# curl https://raw.githubusercontent.com/gshipley/installcentos/master/install-openshift.sh | /bin/bash
+# curl https://raw.githubusercontent.com/carlosthe19916/installcentos/master/install-openshift.sh | /bin/bash
 #+END_EXAMPLE
