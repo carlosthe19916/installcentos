@@ -1,7 +1,6 @@
 [OSEv3:children]
 masters
 nodes
-nfs
 
 [OSEv3:vars]
 ansible_ssh_user=root
@@ -33,6 +32,9 @@ openshift_hosted_logging_storage_volume_size=10Gi
 console.sistcoop.org openshift_schedulable=true
 
 [nfs]
+console.sistcoop.org
+
+[etcd]
 console.sistcoop.org
 
 [nodes]
