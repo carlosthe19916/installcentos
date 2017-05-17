@@ -8,7 +8,7 @@ Install RedHat OpenShift Origin in your development box.
 2. Define the domain name, user name and password defined at installation time of Centos7.
 
 #+BEGIN_EXAMPLE
-# export DOMAIN=org.sistcoop.org
+# export DOMAIN=sistcoop.org
 # export USERNAME=carlos
 # export PASSWORD=password
 #+END_EXAMPLE
