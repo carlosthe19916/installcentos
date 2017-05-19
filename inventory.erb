@@ -11,13 +11,7 @@ openshift_release=v1.5.0
 openshift_image_tag=v1.5.0
 openshift_public_hostname=console.sistcoop.org
 openshift_master_default_subdomain=apps.console.sistcoop.org
-openshift_hosted_metrics_deploy=true
-
-openshift_hosted_metrics_storage_access_modes=['ReadWriteOnce']
-openshift_hosted_metrics_storage_nfs_directory=/exports
-openshift_hosted_metrics_storage_nfs_options='*(rw,root_squash)'
-openshift_hosted_metrics_storage_volume_name=metrics
-openshift_hosted_metrics_storage_volume_size=10Gi
+openshift_hosted_metrics_deploy=false
 
 [masters]
 console.sistcoop.org openshift_schedulable=true
