@@ -2,14 +2,15 @@
 
 ## see: https://www.youtube.com/watch?v=-OOnGK-XeVY
 
-DOMAIN=${DOMAIN:=techdope.io}
-USERNAME=${USERNAME:=gshipley}
+DOMAIN=${DOMAIN:=sistcoop.org}
+USERNAME=${USERNAME:=carlos}
 PASSWORD=${PASSWORD:=password}
 
-
+yum install wget git net-tools bind-utils iptables-services bridge-utils bash-completion kexec sos psacct
+yum -y update
 yum install -y epel-release
-
-yum install -y git wget zile nano net-tools
+yum -y install ansible pyOpenSSL
+yum install -y zile nano
 yum install -y docker
 yum install -y python-cryptography pyOpenSSL.x86_64
 
@@ -17,6 +18,7 @@ yum install -y python-cryptography pyOpenSSL.x86_64
 ## TODO: yum install ansible
 yum install -y "@Development Tools" python2-pip openssl-devel python-devel
 pip install -Iv ansible==2.2.0.0
+pip install --upgrade pip
 
 mkdir -p ~/workspace && cd ~/workspace
 git clone http://github.com/openshift/openshift-ansible
@@ -52,7 +54,7 @@ systemctl restart docker
 systemctl enable docker
 
 cd ~/workspace
-cat installcentos/inventory.erb | sed "s/techdope.io/${DOMAIN}/g" > /tmp/installcentos-inventory.erb
+cat installcentos/inventory.erb | sed "s/sistcoop.org/${DOMAIN}/g" > /tmp/installcentos-inventory.erb
 ansible-playbook -i /tmp/installcentos-inventory.erb openshift-ansible/playbooks/byo/config.yml
 
 #################################################################
