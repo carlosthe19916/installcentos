@@ -2,8 +2,8 @@
 
 ## see: https://www.youtube.com/watch?v=-OOnGK-XeVY
 
-DOMAIN=${DOMAIN:=techdope.io}
-USERNAME=${USERNAME:=gshipley}
+DOMAIN=${DOMAIN:=sistcoop.org}
+USERNAME=${USERNAME:=carlos}
 PASSWORD=${PASSWORD:=password}
 
 
@@ -20,7 +20,7 @@ pip install -Iv ansible==2.2.0.0
 
 mkdir -p ~/workspace && cd ~/workspace
 git clone http://github.com/openshift/openshift-ansible
-git clone https://github.com/carlosthe19916/installcentos
+git clone http://github.com/gshipley/installcentos
 
 cat <<EOD > /etc/hosts
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4 console console.${DOMAIN}
@@ -52,7 +52,7 @@ systemctl restart docker
 systemctl enable docker
 
 cd ~/workspace
-cat installcentos/inventory.erb | sed "s/techdope.io/${DOMAIN}/g" > /tmp/installcentos-inventory.erb
+cat installcentos/inventory.erb | sed "s/sistcoop.org/${DOMAIN}/g" > /tmp/installcentos-inventory.erb
 ansible-playbook -i /tmp/installcentos-inventory.erb openshift-ansible/playbooks/byo/config.yml
 
 #################################################################
