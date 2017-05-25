@@ -54,8 +54,8 @@ systemctl restart docker
 systemctl enable docker
 
 cd ~/workspace
-cat installcentos/inventory.erb | sed "s/sistcoop.org/${DOMAIN}/g" > /tmp/installcentos-inventory.erb
-ansible-playbook -i /tmp/installcentos-inventory.erb openshift-ansible/playbooks/byo/config.yml
+cat installcentos/inventory2.erb | sed "s/sistcoop.org/${DOMAIN}/g" > /tmp/installcentos-inventory2.erb
+ansible-playbook -i /tmp/installcentos-inventory2.erb openshift-ansible/playbooks/byo/config.yml
 
 #################################################################
 ##            PLEASE CHOOSE BETTER CREDENTIALS
